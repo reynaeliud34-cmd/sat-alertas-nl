@@ -23,6 +23,10 @@ jobs:
 
       - name: Ejecutar bot
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+          env:
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+  CHAT_ID: ${{ secrets.CHAT_ID }}
+  SAT_RFC: ${{ secrets.SAT_RFC }}
+  SAT_CURP: ${{ secrets.SAT_CURP }}
+  SAT_EMAIL: ${{ secrets.SAT_EMAIL }}
         run: python bot.py
